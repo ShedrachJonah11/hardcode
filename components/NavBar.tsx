@@ -17,7 +17,7 @@ export default function NavBar() {
         </Link>
 
         <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-xl group bg-gradient-to-br to-[#8D1EA2] from-[#090EDB] group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white">
-          <span className="flex gap-2 relative px-12 py-2 transition-all ease-in text-sm duration-75 bg-white dark:bg-gray-900 rounded-xl group-hover:bg-opacity-0">
+          <span className="flex items-center  gap-2 relative px-5 sm:px-12 py-1 sm:py-2 transition-all ease-in text-sm duration-75 bg-white dark:bg-gray-900 rounded-xl group-hover:bg-opacity-0">
             Connect
             <Image src={arrowright} alt="" />
           </span>
