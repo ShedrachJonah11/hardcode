@@ -33,6 +33,11 @@ interface FAQItemProps {
   answer: string;
 }
 
+interface Steps {
+  number: string;
+  text: string;
+}
+
 export default function Home() {
   const [showSocialLinks, setShowSocialLinks] = React.useState(false);
   const [isOpen, setIsOpen] = React.useState(false);
@@ -61,6 +66,17 @@ export default function Home() {
         <Spacer y={6} />
         <Divider />
         <Spacer y={6} />
+      </div>
+    );
+  }
+
+  function Step({ number, text }: Steps) {
+    return (
+      <div className="flex gap-4 justify-start items-center">
+        <div className="w-8 h-8 shrink-0 grow-0 rounded-full text-[#368DFF] bg-[#9FA0ED] justify-center flex items-center">
+          {number}
+        </div>
+        <p className="font-light">{text}</p>
       </div>
     );
   }
@@ -428,95 +444,68 @@ export default function Home() {
 
         {/* How to use solana */}
 
-        <section className="py-20 px-6 md:px-10 lg:px-32 flex gap-4">
-          <div>
-            <Image src={line} alt="" />
-          </div>
-          <div className="flex flex-col gap-4">
-            <div className="">
+        <section className="py-10 lg:py-20 px-6 md:px-10 lg:px-32 flex flex-col lg:flex-row gap-10">
+          {/* Left Section */}
+          <div className="flex flex-col gap-4 w-full lg:w-1/2">
+            <div>
               <h1 className="font-bold text-2xl">
                 How to use Solana Token Creator
               </h1>
-              <div className="mt-12 flex gap-4 justify-start">
-                <div className="w-6 h-6 rounded-full text-[#368DFF] bg-[#9FA0ED] justify-center flex items-center">
-                  1
-                </div>
-                <p>Connect your Solana wallet.</p>
-              </div>
-              <div className="mt-8 flex gap-4 justify-start">
-                <div className="w-6 h-6 rounded-full text-[#368DFF] bg-[#9FA0ED] justify-center flex items-center">
-                  2
-                </div>
-                <p>Specify the desired name for your Token</p>
-              </div>
-              <div className="mt-8 flex gap-4 justify-start">
-                <div className="w-6 h-6 rounded-full text-[#368DFF] bg-[#9FA0ED] justify-center flex items-center">
-                  3
-                </div>
-                <p>Indicate the symbol (max 8 characters).</p>
-              </div>
-              <div className="mt-8 flex gap-4 justify-start">
-                <div className="w-6 h-6 rounded-full text-[#368DFF] bg-[#9FA0ED] justify-center flex items-center">
-                  4
-                </div>
-                <p>
-                  Select the decimals quantity (0 for Whitelist Token, 5 for
-                  utility Token, 9 for meme token).
-                </p>
-              </div>
-              <div className="mt-8 flex gap-4 justify-start">
-                <div className="w-6 h-6 rounded-full text-[#368DFF] bg-[#9FA0ED] justify-center flex items-center">
-                  5
-                </div>
-                <p>Provide a brief description for your SPL Token.</p>
-              </div>
-              <div className="mt-8 flex gap-4 justify-start">
-                <div className="w-6 h-6 rounded-full text-[#368DFF] bg-[#9FA0ED] justify-center flex items-center">
-                  6
-                </div>
-                <p>Upload the image for your token (PNG).</p>
-              </div>
-              <div className="mt-8 flex gap-4 justify-start">
-                <div className="w-6 h-6 rounded-full text-[#368DFF] bg-[#9FA0ED] justify-center flex items-center">
-                  7
-                </div>
-                <p>Determine the Supply of your Token.</p>
-              </div>
-              <div className="mt-8 flex gap-4 justify-start">
-                <div className="w-6 h-6 rounded-full text-[#368DFF] bg-[#9FA0ED] justify-center flex items-center">
-                  8
-                </div>
-                <p>
-                  Click on create, accept the transaction and wait until your
-                  tokens ready.
-                </p>
+              <div className="mt-4 lg:mt-8 space-y-4">
+                <Step number="1" text="Connect your Solana wallet." />
+                <Step
+                  number="2"
+                  text="Specify the desired name for your Token."
+                />
+                <Step
+                  number="3"
+                  text="Indicate the symbol (max 8 characters)."
+                />
+                <Step
+                  number="4"
+                  text="Select the decimals quantity (0 for Whitelist Token, 5 for utility Token, 9 for meme token)."
+                />
+                <Step
+                  number="5"
+                  text="Provide a brief description for your SPL Token."
+                />
+                <Step
+                  number="6"
+                  text="Upload the image for your token (PNG)."
+                />
+                <Step number="7" text="Determine the Supply of your Token." />
+                <Step
+                  number="8"
+                  text="Click on create, accept the transaction and wait until your tokens ready."
+                />
               </div>
             </div>
           </div>
 
-          {/* <div>
-            <p>
-              The cost of Token creation is 0.5 SOL, covering all fees for SPL
-              Token Creation.
-            </p>
-
-            <p>
-              Once the creation process starts, it will only take a few seconds!
-              Once complete, you will receive the total supply of the token in
-              your wallet.
-            </p>
-
-            <p>
-              Using your wallet, you can manage your token create additional
-              supply or freeze it as needed. Experience the simplicity and
-              affordability of Solana Token creation with our user-friendly
-              platform.
-            </p>
-          </div> */}
+          {/* Right Section */}
+          <div className="flex flex-col gap-4 w-full lg:w-2/4 md:mt-24 mt-2">
+            <div>
+              <p className="font-light mb-6">
+                The cost of Token creation is 0.5 SOL, covering all fees for SPL
+                Token Creation.
+              </p>
+              <p className="font-light mb-6">
+                Once the creation process starts, it will only take a few
+                seconds! Once complete, you will receive the total supply of the
+                token in your wallet.
+              </p>
+              <p className="font-light mb-6">
+                Using your wallet, you can manage your token create additional
+                supply or freeze it as needed. Experience the simplicity and
+                affordability of Solana Token creation with our user-friendly
+                platform.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* FAQ */}
-        <section className="py-20 px-6 md:px-10 lg:px-32">
+        <section className="py-6 px-6 md:px-10 lg:px-32">
           <div className="text-center md:text-left">
             <h1 className="font-bold text-3xl md:text-5xl">
               Frequently Asked Questions
