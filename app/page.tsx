@@ -89,7 +89,7 @@ export default function Home() {
         <section className="relative bg-screen h-full">
           {/* Hero Text and Content */}
           <div className="relative z-10 flex flex-col justify-start items-center h-full py-12">
-            <div className="mt-12 md:mt-32 items-center flex-col flex">
+            <div className="mt-16 md:mt-32 items-center flex-col flex">
               <button className="relative inline-flex items-center justify-center p-0.5 mb-4 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-3xl group bg-gradient-to-br to-[#8D1EA2] from-[#090EDB] hover:text-white dark:text-white ">
                 <span className="flex items-center font-light gap-2 relative px-4 py-1.5 transition-all ease-in text-sm duration-75 text-[#0E0B29] dark:bg-white rounded-2xl group-hover:bg-opacity-0">
                   Solana Token Creator
