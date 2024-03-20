@@ -19,7 +19,7 @@ function Footer() {
         <p className="font-light text-center md:text-left md:ml-6 mt-4 md:mt-0">
           {" "}
           <span className="text-xl">&copy;</span> {date.getUTCFullYear()}{" "}
-          VetMemos All Rights Reserved.
+          Hardcode All Rights Reserved.
         </p>
       </div>
     </footer>

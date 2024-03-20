@@ -106,7 +106,7 @@ export default function Home() {
                 </span>{" "}
                 Token
               </h1>
-              <img src={slash} alt="" className="w-16 md:w-auto" />
+              <Image src={slash} alt="" className="w-16 md:w-auto" />
               <div className="max-w-screen-lg mx-auto px-6">
                 <p className="text-center font-light text-[#36394A] text-lg md:text-xl mt-8">
                   Easily generate your Solana SPL Token using our
@@ -323,8 +323,9 @@ export default function Home() {
                   </h1>
                   <p className="text-[#36394A] font-light mb-10">
                     Interested in establishing a liquidity pool? To proceed,
-                    you'll need to "Revoke Freeze Authority" of the Token, which
-                    can be done right here. The associated cost is 0.1 SOL.
+                    you&apos;ll need to &#34;Revoke Freeze Authority&#34; of the
+                    Token, which can be done right here. The associated cost is
+                    0.1 SOL.
                   </p>
                   <div className="mb-10">
                     <label htmlFor="" className="font-light mb-2">
@@ -539,11 +540,11 @@ export default function Home() {
             <Spacer y={10} />
 
             <p className="font-light">
-              If you're seeking a convenient and effective method for generating
-              SPL tokens on the Solana blockchain, our online SPL token creator
-              offers an ideal solution. Our platform is user-friendly and
-              intuitive, enabling users to tailor and launch their tokens within
-              minutes.
+              If you&apos;re seeking a convenient and effective method for
+              generating SPL tokens on the Solana blockchain, our online SPL
+              token creator offers an ideal solution. Our platform is
+              user-friendly and intuitive, enabling users to tailor and launch
+              their tokens within minutes.
             </p>
             <Spacer y={6} />
 
@@ -575,11 +576,11 @@ export default function Home() {
             <Spacer y={10} />
 
             <p className="font-light">
-              Whether you're a seasoned developer or just starting out, our SPL
-              Token Creator software is tailor-made for you. Experience the ease
-              of quickly and securely generating tokens, saving valuable time
-              and resources. What sets us apart is our unwavering commitment to
-              exceptional support.
+              Whether you&apos;re a seasoned developer or just starting out, our
+              SPL Token Creator software is tailor-made for you. Experience the
+              ease of quickly and securely generating tokens, saving valuable
+              time and resources. What sets us apart is our unwavering
+              commitment to exceptional support.
             </p>
             <Spacer y={6} />
 
@@ -588,8 +589,8 @@ export default function Home() {
               inquiries or challenges you may encounter. Start your journey of
               creating and managing SPL tokens on Solana today with confidence,
               knowing that our reliable and secure online creator offers an
-              unparalleled experience. You won't find a more user-friendly and
-              efficient solution elsewhere!
+              unparalleled experience. You won&apos;t find a more user-friendly
+              and efficient solution elsewhere!
             </p>
           </div>
         </section>
