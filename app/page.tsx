@@ -46,6 +46,17 @@ export default function Home() {
     setIsOpen(!isOpen);
   };
 
+  const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
+
+  const handleFileUpload = (files: FileList | null) => {
+    if (files && files.length > 0) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setSelectedImage(reader.result as string);
+      };
+      reader.readAsDataURL(files[0]);
+    }
+  };
   function FAQItem({ question, answer }: FAQItemProps) {
     const [isOpen, setIsOpen] = React.useState(false);
 
@@ -126,7 +137,7 @@ export default function Home() {
             <Card className="border-opacity-50 w-full md:w-[82%] flex justify-center">
               <CardBody className="flex flex-col space-y-4 p-4 md:p-24">
                 <div className="flex flex-col md:flex-row md:space-x-4">
-                  <div className="flex flex-col w-full">
+                  <div className="flex flex-col w-full mb-2">
                     <label
                       htmlFor=""
                       className="text-[#344054] text-sm font-light mb-2"
@@ -152,7 +163,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col md:flex-row md:space-x-4 py-4">
-                  <div className="flex flex-col w-full">
+                  <div className="flex flex-col w-full mb-2">
                     <label
                       htmlFor=""
                       className="text-[#344054] text-sm font-light mb-2"
@@ -197,10 +208,24 @@ export default function Home() {
                     >
                       Image
                     </label>
-                    <div className="border justify-center items-center flex text-black h-44 border-[#D0D5DD] bg-transparent rounded-lg py-1.5 outline-none">
-                      <button>
-                        <Image src={upload} alt="src" />
-                      </button>
+                    <div className="border justify-center items-center flex text-black h-44 border-[#D0D5DD] bg-transparent rounded-lg py-1.5 outline-none overflow-hidden">
+                      <label htmlFor="file-upload" className="cursor-pointer">
+                        {selectedImage ? (
+                          <img
+                            src={selectedImage}
+                            alt="Selected"
+                            className="w-44 h-44 object-contain"
+                          />
+                        ) : (
+                          <Image src={upload} alt="Upload" />
+                        )}
+                      </label>
+                      <input
+                        id="file-upload"
+                        type="file"
+                        className="hidden"
+                        onChange={(e) => handleFileUpload(e.target.files)}
+                      />
                     </div>
                   </div>
                 </div>
