@@ -56,7 +56,7 @@ export default function Home() {
     return (
       <div>
         <div className="flex justify-between items-center">
-          <h1 className="font-bold text-xl">{question}</h1>
+          <h1 className="font-bold text-md md:text-xl">{question}</h1>
           <button onClick={toggleAnswer}>
             <Image src={isOpen ? dropdownleft : dropdown} alt="dropdown" />
           </button>
@@ -90,11 +90,12 @@ export default function Home() {
           {/* Hero Text and Content */}
           <div className="relative z-10 flex flex-col justify-start items-center h-full py-12">
             <div className="mt-16 md:mt-32 items-center flex-col flex">
-              <button className="relative inline-flex items-center justify-center p-0.5 mb-4 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-3xl group bg-gradient-to-br to-[#8D1EA2] from-[#090EDB] hover:text-white dark:text-white ">
-                <span className="flex items-center font-light gap-2 relative px-4 py-1.5 transition-all ease-in text-sm duration-75 text-[#0E0B29] dark:bg-white rounded-2xl group-hover:bg-opacity-0">
+              <div className="relative inline-flex items-center justify-center p-0.5 mb-4 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-3xl group bg-gradient-to-br to-[#8D1EA2] from-[#090EDB] dark:text-white">
+                <span className="flex items-center font-light gap-2 relative px-4 py-1.5 transition-all ease-in text-sm duration-75 text-[#0E0B29] dark:bg-white rounded-2xl">
                   Solana Token Creator
                 </span>
-              </button>
+              </div>
+
               <p className="font-light text-center text-[#36394A] mb-6">
                 An ideal solution for crafting Solana SPL tokens. Streamlined,
                 intuitive, and rapid.
@@ -176,8 +177,8 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <div className="flex flex-row space-x-4 ">
-                  <div className="flex flex-col w-full ">
+                <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 ">
+                  <div className="flex flex-col w-full">
                     <label
                       htmlFor=""
                       className="text-[#344054] text-sm font-light mb-2"
@@ -189,7 +190,7 @@ export default function Home() {
                       className="border px-2 h-44 text-black border-[#D0D5DD] bg-transparent rounded-lg py-1.5 outline-none"
                     />
                   </div>
-                  <div className="flex flex-col w-[400px]">
+                  <div className="flex flex-col w-full md:w-[400px]">
                     <label
                       htmlFor=""
                       className="text-[#344054] text-sm font-light mb-2"
@@ -203,6 +204,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+
                 <div className="py-4">
                   <div className="flex justify-center  items-center gap-2">
                     <p className="text-[#344054] font-light">
@@ -213,7 +215,7 @@ export default function Home() {
                     />
                   </div>
                   {showSocialLinks && (
-                    <div className="flex flex-row space-x-4 mt-4">
+                    <div className="flex flex-col space-y-4 mt-4 sm:flex-row sm:space-y-0 sm:space-x-4">
                       <div className="flex flex-col w-full">
                         <label
                           htmlFor=""
@@ -269,31 +271,30 @@ export default function Home() {
                     </div>
                   )}
 
-                  <div className="flex flex-col md:flex-row justify-between items-center mt-10 mb-4">
-                    <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-center">
+                  <div className="flex flex-col md:flex-row justify-between items-start mt-10 mb-4">
+                    <div className="flex  gap-2 md:gap-4 items-center">
                       <div className="flex">
                         <p className="font-light">Immutable</p>
                         <Image src={warn} alt="" />
                       </div>
                       <Switch size="sm" />
-                      <span className=" md:inline">(+0.1 SOL)</span>
+                      <span className="md:inline">(+0.1 SOL)</span>
                     </div>
-                    <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-center mt-4 md:mt-0">
+                    <div className="flex  gap-2 md:gap-4 items-center mt-4 md:mt-0">
                       <div className="flex">
                         <p className="font-light">Revoke Freeze</p>
                         <Image src={warn} alt="" />
                       </div>
                       <Switch size="sm" />
-
-                      <span className=" md:inline">(+0.1 SOL)</span>
+                      <span className="md:inline">(+0.1 SOL)</span>
                     </div>
-                    <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-center mt-4 md:mt-0">
+                    <div className="flex  gap-2 md:gap-4 items-center mt-4 md:mt-0">
                       <div className="flex">
                         <p className="font-light">Revoke Freeze</p>
                         <Image src={warn} alt="" />
                       </div>
                       <Switch size="sm" />
-                      <span className=" md:inline">(+0.1 SOL)</span>
+                      <span className="md:inline">(+0.1 SOL)</span>
                     </div>
                   </div>
                 </div>
