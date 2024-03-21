@@ -107,7 +107,7 @@ export default function Home() {
                 </span>
               </div>
 
-              <p className="font-light text-center text-[#36394A] mb-6">
+              <p className="font-normal text-center text-[#36394A] mb-6">
                 An ideal solution for crafting Solana SPL tokens. Streamlined,
                 intuitive, and rapid.
               </p>
@@ -120,7 +120,7 @@ export default function Home() {
               </h1>
               <Image src={slash} alt="" className="w-16 md:w-auto" />
               <div className="max-w-screen-lg mx-auto px-6">
-                <p className="text-center font-light text-[#36394A] text-lg md:text-xl mt-8">
+                <p className="text-center font-normal text-[#36394A] text-lg md:text-xl mt-8">
                   Easily generate your Solana SPL Token using our
                   straightforward 7+1 step process – no coding necessary. Tailor
                   your Solana Token precisely to your specifications. It takes
@@ -130,11 +130,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="absolute w-full top-96 md:top-20">
+          <div className="absolute w-full top-[50%] md:top-20">
             <Image src={bottombg} alt="" className="w-full" />
           </div>
           <div className="flex justify-center items-center">
-            <Card className="border-opacity-50 w-full md:w-[82%] flex justify-center">
+            <Card className="border-opacity-50 w-[89%] md:w-[82%] flex justify-center">
               <CardBody className="flex flex-col space-y-4 p-4 md:p-24">
                 <div className="flex flex-col md:flex-row md:space-x-4">
                   <div className="flex flex-col w-full mb-2">
@@ -157,12 +157,13 @@ export default function Home() {
                       Symbol
                     </label>
                     <input
-                      type="symbol"
+                      type="number"
+                      step="any"
                       className="border px-2 text-black border-[#D0D5DD] bg-transparent rounded-lg py-4 outline-none"
                     />
                   </div>
                 </div>
-                <div className="flex flex-col md:flex-row md:space-x-4 py-4">
+                <div className="flex flex-col md:flex-row md:space-x-4 ">
                   <div className="flex flex-col w-full mb-2">
                     <label
                       htmlFor=""
@@ -171,8 +172,8 @@ export default function Home() {
                       Decimal
                     </label>
                     <input
-                      type="decimal"
-                      className="border px-2 text-white border-[#D0D5DD] bg-transparent rounded-lg py-4 outline-none"
+                      type="number"
+                      className="border px-2 text-black border-[#D0D5DD] bg-transparent rounded-lg py-4 outline-none"
                     />
                   </div>
                   <div className="flex flex-col w-full">
@@ -326,10 +327,10 @@ export default function Home() {
                 <div className="flex justify-center items-center ">
                   <Button
                     size="lg"
-                    className="relative w-96 inline-flex items-center justify-center p-0.5 mb-2 me-2  bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-xl border-2 border-black"
+                    className="relative w-96 h-14 md:h-16 inline-flex items-center justify-center mb-2  bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-xl border-2 border-black"
                   >
                     <Image src={token} alt="token" />
-                    <span className="flex items-center gap-2 relative px-5 sm:px-4 py-1 sm:py-3 transition-all ease-in text-lg duration-75 ">
+                    <span className="flex items-center text-lg">
                       Create Token
                     </span>
                   </Button>
